@@ -1,0 +1,561 @@
+
+@import url("https://daneden.github.io/animate.css/animate.min.css");
+/*--------------------------*/
+/*Basic setup*/
+/*--------------------------*/
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color:#555;
+    font-family: 'Lato','Arial','sans-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+
+}
+.clearfix{zoom: 1}
+.clearfix::after{
+    content:'.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*--------------------------*/
+/*REUSEABLE COMPONENETS*/
+/*--------------------------*/
+.row{
+    max-width: 1140px;
+    margin: 0 auto 0 auto;
+}
+
+section{
+    padding: 80px 0;
+}
+
+
+
+h1,h2,h3{
+    
+    text-transform: uppercase;
+    
+    
+   
+}
+h1{
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+    font-weight: 200;
+}
+h2::after{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width:150px;
+    margin: 30px auto;
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+    font-weight: 250;
+}
+
+.box{
+    padding: 1%;
+}
+/*Paragraphs*/
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    
+}
+ .box p{
+    font-size: 90%;
+    line-height: 140%;
+}
+
+
+
+/*--------------------------*/
+/*icons*/
+/*--------------------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    
+}
+.icon-small{
+    font-size: 150%;
+    display: inline-block;
+    color: #cf6d17;
+    margin-right: 15px;
+}
+
+/*--------------------------*/
+/*BUTTONS*/
+/*--------------------------*/
+.btn:link,
+.btn:visited,
+input[type =  submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type =  submit]{
+    background-color: #e67e22;
+    color: #fff;
+    border: 1px solid #e67e22;
+    margin-right: 15px;
+
+}
+
+.btn-ghost:link,
+.btn-ghost:visited
+{
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+.btn:hover,
+.btn:active{
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type =  submit]:hover,
+input[type =  submit]:active{
+    background-color: #cf6d17;
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+/*--------------------------*/
+/*HEADER*/
+/*--------------------------*/
+/*--------------------------*/
+/*orange color =#cf6d17 */
+/*--------------------------*/
+
+
+
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(back-img/hero.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.hero-text-box
+{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.logo{
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+
+}
+.logo-black{
+    height: 50px;
+    width: auto;
+    float: left;
+    margin: 5px 0;
+}
+.logo-black{
+    display: none;
+}
+/*--------------------------*/
+/*main navigation*/
+/*--------------------------*/
+
+
+
+
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 40px;
+
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+
+    border-bottom: 2px solid #cf6d17;
+}
+/*--------------------------*/
+/*sticky class */
+/*--------------------------*/
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 0,2px,2px,rgb(207, 202, 202);
+    z-index: 9999;
+}
+.sticky .main-nav{
+    float: right;
+    list-style: none;
+    margin-top: 18px;
+
+}
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 8px 0;
+    color: #555;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    
+    
+}
+.sticky .main-nav li a:hover,
+.sticky .main-nav li a:active{
+    padding-bottom: 18px;
+    border-bottom: 2px solid #cf6d17;
+
+}
+.sticky .logo-black{
+    display: block;
+}
+.sticky .logo{
+    display: none;
+}
+
+/*meals*/
+
+
+.section-meals{
+    padding: 0;
+}
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+ .meals-showcase li{
+     display: block;
+     float: left;
+     width: 25%;
+ }
+ .meal-photo{
+     width: 100;
+     margin: 0;
+    overflow: hidden;
+    background-color: #000;
+ }
+ .meal-photo img{
+     width: 100%;
+     height: auto;
+     transform: scale(1.15);
+     transition: transform 0.5s , opacity  0.5s;
+     opacity: 0.7;
+ }
+ .meal-photo img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+
+    }
+    /*  feature changes*/
+    .section-features .long-copy{
+        margin-bottom: 30px;
+    }
+
+    /*--------------------------*/
+/*How it works*/
+/*--------------------------*/
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+.steps-boxs{
+    margin-top: 150px;
+    padding-left: 3%;
+}
+.steps-box:first-child{
+ margin-top: 30px;
+text-align: right;
+padding: 3%;
+}
+/*.steps-box:last-child{
+    
+   
+}*/
+.app-screen{
+    width: 50%;
+}
+.works-step{
+    margin-bottom: 50px;
+}
+.works-step-links{
+    margin-bottom: 80px;
+}
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px; 
+}
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+   /*--------------------------*/
+/*cities*/
+/*--------------------------*/
+
+
+.cities{
+    
+    padding: 1%;
+}
+.section-cities{
+    display: block;
+    list-style: none;
+    width: 100%;
+}
+.section-cities li{
+    float: left;
+    display: block;
+    width:100%;
+    margin-bottom: 10px;
+
+
+}
+.city-photo{
+    width: 100;
+    margin: 0;
+   overflow: hidden;
+   
+}
+.city-photo img{
+    width: 100%;
+    height: auto;
+}
+.section-cities li a{
+    color: #e67e22;
+}
+/*.section-cities li div{
+    
+}*/
+
+
+  /*--------------------------*/
+/*cities*/
+/*--------------------------*/
+
+.section-customers{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)),url(back-img/back-customers.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    
+}
+blockquote,cite{
+    font-style: italic;
+    
+}
+blockquote{
+    padding: 2%;
+    line-height: 165%;
+    position: relative;
+    padding-top: 45px;
+}
+blockquote::before{
+content: "\201C";
+font-size: 500%;
+position: absolute;
+top:18px;
+left: -28px;
+
+}
+cite{
+    font-size: 90%;
+    margin-top: 25px;
+    display: block;
+}
+cite img{
+height: 50px;
+border-radius: 50%;
+vertical-align: middle;
+margin-right: 10px;
+}
+ 
+ /*--------------------------*/
+/*sign up*/
+/*--------------------------*/
+.section-plans{
+   background-color:   #f4f4f4;
+}
+.meal-plans{
+
+    margin-left: 5%;
+    border-radius:5px;
+    width: 90%;
+    background-color: #fff;
+    
+}
+.meal-plans div{
+    padding: 15px;
+   border-bottom: 1px solid #e8e8e8;
+}
+.meal-price{
+    font-size: 300%;
+    font-weight: 100;
+    color: #cf6d17;
+    margin-bottom: 10px;
+}
+.meal-plans span{
+    font-size: 30%;
+    font-weight: 300;
+    
+}
+.meal-info{
+    font-size: 90%;
+}
+.meal-plans ul{
+list-style: none;
+}
+.meal-plans ul li{
+    padding: 5px 0;
+    margin-left: 15px;
+
+}
+.align{
+    text-align: center;
+}
+
+
+/*--------------------------*/
+/*contact form*/
+/*--------------------------*/
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+  
+}
+.contact-form div{
+    margin-bottom:35px;
+}
+input[type =  email],
+input[type = text],
+select{
+    width: 100%;
+    padding: 1%;
+    border-bottom: 1px solid rgb(163, 158, 158);
+    
+    font-style: Lato;
+    font-size: 80%;
+    border-top: none;
+    border-right: none;
+    border-left:none;
+    
+    
+
+}
+input[type = submit]{
+    font-size: 80%;
+}
+
+
+/*--------------------------*/
+/*contact form*/
+/*--------------------------*/
+
+.js--wp-2{
+    opacity: 0;
+    animation-duration: 1s;
+}
+.js--wp-2.animated{
+    opacity: 1;
+    
+    animation-duration: 1s;
+}
+
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+
+}
+.js--wp-3.animated{
+    opacity: 1;
+    animation-duration: 1s;
+}
